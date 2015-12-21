@@ -41,7 +41,6 @@ module RefBiblio
 		def publicacion (publicacion)
 			@publicacion = publicacion
 		end
-	end
 		def get_titulo
 			@titulo
 		end
@@ -83,6 +82,7 @@ module RefBiblio
 			end
 		end
 	end
+end
 	
 	class Libro < Referencia
 		attr_accessor :edicion, :volumen
@@ -109,23 +109,34 @@ module RefBiblio
 	
 	class Periodicas < Referencia
 		attr_accessor :formato
-		def initialize(autor, titulo, editorial, publicacion, formato)
-			super(autor,titulo,editorial,publicacion)
-			@formato=formato.capitalize
+		def initialize()
+		end
+		def formato (formato)
+			@formato = formato.capitalize
 		end
 	end
 
 	class ArtPeriodico < Periodicas
 		attr_accessor :paginas, :formato
-		def initialize(autor, titulo, publicacion, editorial, paginas)
-			formato="Papel"
-			super(autor,titulo,editorial,publicacion,formato)
+		def initialize(&block)
+			if block_given?
+				if block.arity == 1 
+					yield self
+				else
+					instance_eval &block 
+				end
+			end
+		end
+		def paginas (paginas)
 			@paginas = paginas
+		end
+		def formato (formato)
+			@formato = formato
 		end
 		
 		def to_s
 			string = ""
-			string << @autor << " (" << Date::MONTHNAMES[publicacion.month] << " " << publicacion.day.to_s << ", " << publicacion.year.to_s << "). " << @titulo << ". " << @editorial << ", pp. " << @paginas.to_s << "."
+			string << @autor << " (" << Date::MONTHNAMES[get_publicacion.month] << " " << get_publicacion.day.to_s << ", " << get_publicacion.year.to_s << "). " << @titulo << ". " << @editorial << ", pp. " << @formato << ", " << @paginas.to_s << " paginas" << "."
 		end
 	end
 	

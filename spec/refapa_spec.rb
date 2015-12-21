@@ -10,12 +10,14 @@ describe RefAPA::Refapa do
             edicion     1
             volumen     1
         end
-        @periodico1 = RefBiblio::ArtPeriodico.new () do
+        @periodico1 = RefBiblio::ArtPeriodico.new() do
             autor       ["Rafael Herrero","Daniel Ramos"]
             titulo      "La regeneracion de las gemas"
             editorial   "El Mundo"
             publicacion Date.new(2015,11,17)
+            formato     "Papel"
             paginas     130
+        end
         
 =begin
 		@documento1 = RefBiblio::DocElectronico.new(["Rafael Herrero","Daniel Ramos"], "Estudio del habitat de las gemas", "Universidad de La Laguna", "Oficina de Software Libre de la ULL", Date.new(2015,11,17), "PDF", "http://osl.ull.es/noticias/", Date.new(2015,12,9))
@@ -32,7 +34,7 @@ describe RefAPA::Refapa do
 
         it "Insertar periodico y bien formateado" do
             @APA.insertar(@periodico1)
-            expect(@APA.to_s).to eq("Herrero, R. & Ramos, D. (November 17, 2015). La Regeneracion de las Gemas. El Mundo, pp. 130.\n")
+            expect(@APA.to_s).to eq("Herrero, R. & Ramos, D. (November 17, 2015). La Regeneracion de las Gemas. El Mundo, pp. Papel, 130 paginas.\n")
         end
 =begin
         it "Insertar documento electronico" do
