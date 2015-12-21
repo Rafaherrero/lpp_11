@@ -60,7 +60,6 @@ GEM
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rdoc (4.2.0)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
@@ -92,6 +91,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
+    yard (0.8.7.6)
 
 PLATFORMS
   ruby
@@ -103,6 +103,6 @@ DEPENDENCIES
   guard-bundler
   guard-rspec
   rake (~> 10.0)
-  rdoc
   refBiblio!
   rspec (~> 3.3.0)
+  yard
