@@ -42,27 +42,39 @@ module RefBiblio
 			@publicacion = publicacion
 		end
 	end
+		def get_titulo
+			@titulo
+		end
+		def get_autor
+			@autor
+		end
+		def get_editorial
+			@editorial
+		end
+		def get_publicacion
+			@publicacion
+		end
 
 		def <=> (otro)
-			if(@autor == otro.autor)
-				if(@publicacion == otro.publicacion)
-					if(@titulo == otro.titulo)
+			if(@autor == otro.get_autor)
+				if(@publicacion == otro.get_publicacion)
+					if(@titulo == otro.get_titulo)
 						return 0
 					else
-						arr = [@titulo, otro.titulo]
+						arr = [@titulo, otro.get_titulo]
 						arr.sort_by!{|t| t.downcase}
 						if(arr.first == @titulo)
 							return 1
 						end
 						return -1
 					end
-				elsif publicacion > otro.publicacion
+				elsif publicacion > otro.get_publicacion
 					return -1
 				else
 					return 1
 				end
 			else
-				arr = [@autor, otro.autor]
+				arr = [@autor, otro.get_autor]
 				arr.sort_by!{|t| t.downcase}
 				if(arr.first == @autor)
 					return -1
@@ -91,7 +103,7 @@ module RefBiblio
 		end
 		def to_s
 			string=""
-			string  << @autor << " (" << Date::MONTHNAMES[publicacion.month] << " " << publicacion.day.to_s << ", " << publicacion.year.to_s << "). " << @titulo << " (" << @edicion.to_s << ") (" << @volumen.to_s << "). " << @editorial << "."
+			string  << @autor << " (" << Date::MONTHNAMES[get_publicacion.month] << " " << get_publicacion.day.to_s << ", " << get_publicacion.year.to_s << "). " << @titulo << " (" << @edicion.to_s << ") (" << @volumen.to_s << "). " << @editorial << "."
 		end
 	end
 	
