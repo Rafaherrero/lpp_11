@@ -13,9 +13,10 @@ describe RefAPA::Refapa do
         
         
         
-        
+=begin
 		@periodico1 = RefBiblio::ArtPeriodico.new(["Rafael Herrero","Daniel Ramos"], "La regeneracion de las gemas", Date.new(2015,11,17), "El Mundo", 130)
 		@documento1 = RefBiblio::DocElectronico.new(["Rafael Herrero","Daniel Ramos"], "Estudio del habitat de las gemas", "Universidad de La Laguna", "Oficina de Software Libre de la ULL", Date.new(2015,11,17), "PDF", "http://osl.ull.es/noticias/", Date.new(2015,12,9))
+=end
     end
     before :each do
         @APA = RefAPA::Refapa.new

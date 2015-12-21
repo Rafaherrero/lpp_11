@@ -4,9 +4,9 @@ module RefBiblio
 	class Referencia
 		include Comparable
 		attr_accessor :autor, :titulo, :editorial, :publicacion
-		def initialize(autor, titulo, editorial, publicacion)
-			@editorial = editorial
-			@publicacion = publicacion
+		def initialize()
+		end
+		def autor (autor)
 			str=""
 			autor.each do |a|
 				separar = a.split(/\W+/)
@@ -21,7 +21,8 @@ module RefBiblio
 				str+=" & " unless a == autor.last
 			end
 			@autor = str
-			
+		end
+		def titulo (titulo)
 			tit = titulo.split(' ')
 			tit.each do |word|
 				if word.length > 3
@@ -32,10 +33,15 @@ module RefBiblio
 				if word == tit[0]
 					word.capitalize!
 				end
-			end
-
 			@titulo = tit.join(' ')
 		end
+		def editorial(editorial)
+			@editorial = editorial
+		end
+		def publicacion (publicacion)
+			@publicacion = publicacion
+		end
+	end
 
 		def <=> (otro)
 			if(@autor == otro.autor)
