@@ -18,10 +18,16 @@ describe RefAPA::Refapa do
             formato     "Papel"
             paginas     130
         end
-        
-=begin
-		@documento1 = RefBiblio::DocElectronico.new(["Rafael Herrero","Daniel Ramos"], "Estudio del habitat de las gemas", "Universidad de La Laguna", "Oficina de Software Libre de la ULL", Date.new(2015,11,17), "PDF", "http://osl.ull.es/noticias/", Date.new(2015,12,9))
-=end
+        @documento1 = RefBiblio::DocElectronico.new() do
+            autor       ["Rafael Herrero","Daniel Ramos"]
+            titulo      "Estudio del habitat de las gemas"
+            editorial   "Universidad de La Laguna"
+            publicacion Date.new(2015,11,17)
+            edicion     "Oficina de Software Libre de la ULL"
+            formato     "PDF"
+            url         "http://osl.ull.es/noticias/"
+            fechacceso  Date.new(2015,12,9)
+        end
     end
     before :each do
         @APA = RefAPA::Refapa.new
@@ -36,11 +42,12 @@ describe RefAPA::Refapa do
             @APA.insertar(@periodico1)
             expect(@APA.to_s).to eq("Herrero, R. & Ramos, D. (November 17, 2015). La Regeneracion de las Gemas. El Mundo, pp. Papel, 130 paginas.\n")
         end
-=begin
+
         it "Insertar documento electronico" do
             @APA.insertar(@documento1)
             expect(@APA.to_s).to eq("Herrero, R. & Ramos, D. (November 17, 2015). Estudio del Habitat de las GemasPdf. Universidad de La Laguna: Oficina de Software Libre de la ULL. Disponible en: http://osl.ull.es/noticias/ (December 9, 2015). \n")
         end
+=begin
         it "Insertar todo y bien formateado" do
         @APA.insertar(@libro1)
         @APA.insertar(@periodico1)
