@@ -10,21 +10,19 @@ describe RefAPA::Refapa do
             edicion     1
             volumen     1
         end
-        @periodico1 = RefBiblio::ArtPeriodico.new() do
+        @periodico1 = RefBiblio::ArtPeriodico.new("Papel") do
             autor       ["Rafael Herrero","Daniel Ramos"]
             titulo      "La regeneracion de las gemas"
             editorial   "El Mundo"
             publicacion Date.new(2015,11,17)
-            formato     "Papel"
             paginas     130
         end
-        @documento1 = RefBiblio::DocElectronico.new() do
+        @documento1 = RefBiblio::DocElectronico.new("PDF") do
             autor       ["Rafael Herrero","Daniel Ramos"]
             titulo      "Estudio del habitat de las gemas"
             editorial   "Universidad de La Laguna"
             publicacion Date.new(2015,11,17)
             edicion     "Oficina de Software Libre de la ULL"
-            formato     "PDF"
             url         "http://osl.ull.es/noticias/"
             fechacceso  Date.new(2015,12,9)
         end

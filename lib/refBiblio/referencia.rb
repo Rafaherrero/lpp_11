@@ -109,16 +109,14 @@ end
 	
 	class Periodicas < Referencia
 		attr_accessor :formato
-		def initialize()
-		end
-		def formato (formato)
+		def initialize(formato)
 			@formato = formato.capitalize
 		end
 	end
 
 	class ArtPeriodico < Periodicas
 		attr_accessor :paginas, :formato
-		def initialize(&block)
+		def initialize(formato, &block)
 			if block_given?
 				if block.arity == 1 
 					yield self
@@ -126,14 +124,11 @@ end
 					instance_eval &block 
 				end
 			end
+			super(formato)
 		end
 		def paginas (paginas)
 			@paginas = paginas
 		end
-		def formato (formato)
-			@formato = formato
-		end
-		
 		def to_s
 			string = ""
 			string << @autor << " (" << Date::MONTHNAMES[get_publicacion.month] << " " << get_publicacion.day.to_s << ", " << get_publicacion.year.to_s << "). " << @titulo << ". " << @editorial << ", pp. " << @formato << ", " << @paginas.to_s << " paginas" << "."
@@ -142,16 +137,31 @@ end
 	
 	class DocElectronico < Periodicas
 		attr_accessor :formato, :url, :fechacceso
-		def initialize(autor, titulo, editorial, edicion, publicacion, formato, url, fechacceso)
-			super(autor,titulo,editorial,publicacion, formato)
-			@url = url
-			@fechacceso = fechacceso
+		def initialize(formato, &block)
+			if block_given?
+				if block.arity == 1 
+					yield self
+				else
+					instance_eval &block 
+				end
+			end
+			super(formato)
+		end
+		def edicion(edicion)
 			@edicion = edicion
 		end
-		
+		def fechacceso(fechacceso)
+			@fechacceso = fechacceso
+		end
+		def url(url)
+			@url = url
+		end
+		def get_fechacceso
+			@fechacceso
+		end
 		def to_s
 			string = ""
-			string << @autor << " (" << Date::MONTHNAMES[publicacion.month] << " " << publicacion.day.to_s << ", " << publicacion.year.to_s << "). " << @titulo << @formato << ". " << @editorial << ": " << @edicion << ". Disponible en: " << @url << " (" << Date::MONTHNAMES[fechacceso.month] << " " << fechacceso.day.to_s << ", " << fechacceso.year.to_s << "). "
+			string << @autor << " (" << Date::MONTHNAMES[get_publicacion.month] << " " << get_publicacion.day.to_s << ", " << get_publicacion.year.to_s << "). " << @titulo << @formato << ". " << @editorial << ": " << @edicion << ". Disponible en: " << @url << " (" << Date::MONTHNAMES[get_fechacceso.month] << " " << get_fechacceso.day.to_s << ", " << get_fechacceso.year.to_s << "). "
 		end
 	end
 end
