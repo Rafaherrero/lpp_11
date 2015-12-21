@@ -5,20 +5,6 @@ module RefBiblio
 		include Comparable
 		attr_accessor :autor, :titulo, :editorial, :publicacion
 		def initialize(autor, titulo, editorial, publicacion)
-			#raise ArgumentError, "El autor no es un array" unless autor.is_a?(Array)
-			#autor.each do |a|
-			#	raise ArgumentError, "Uno de los autores no es un string" unless a.is_a?(String)
-			#end
-			#raise ArgumentError, "El titulo no es un string" unless titulo.is_a?(String)
-			#raise ArgumentError, "La serie no es nulo o un string" unless serie.nil? || serie.is_a?(String)
-			raise ArgumentError, "La editorial no es un string" unless titulo.is_a?(String)
-			#raise ArgumentError, "La edicion no es un numero entero" unless edicion.is_a?(Integer)
-			#raise ArgumentError, "La edicion no es un numero no valido" unless edicion > 0
-			##raise ArgumentError, "La fecha no es de tipo Date" unless publicacion.is_a?(Date)
-			#raise ArgumentError, "Los ISBN no son un array" unless isbn.is_a?(Array)
-			#isbn.each do |i|
-			#	raise ArgumentError, "Uno de los ISBN no es un string" unless i.is_a?(String)
-			#end
 			@editorial = editorial
 			@publicacion = publicacion
 			str=""
@@ -82,9 +68,19 @@ module RefBiblio
 	
 	class Libro < Referencia
 		attr_accessor :edicion, :volumen
-		def initialize(autor, titulo, editorial, publicacion, edicion, volumen)
-			super(autor,titulo,editorial,publicacion)
+		def initialize(&block)
+			if block_given?
+				if block.arity == 1 
+					yield self
+				else
+					instance_eval &block 
+				end
+			end
+		end
+		def edicion(edicion)
 			@edicion = edicion
+		end
+		def volumen (volumen)
 			@volumen = volumen
 		end
 		def to_s

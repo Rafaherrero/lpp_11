@@ -2,7 +2,18 @@ require "spec_helper"
 
 describe RefAPA::Refapa do
     before :all do 
-        @libro1 = RefBiblio::Libro.new(["Alexby 11","Mangel Ros","Sr Cheeto"], "Salseo Gamer", "Temas de hoy", Date.new(2015,1,1), 1, 1)
+        @libro1 = RefBiblio::Libro.new() do
+            autor      ["Alexby 11","Mangel Ros","Sr Cheeto"]
+            titulo      "Salseo Gamer"
+            editorial   "Temas de hoy"
+            publicacion Date.new(2015,1,1)
+            edicion     1
+            volumen     1
+        end
+        
+        
+        
+        
 		@periodico1 = RefBiblio::ArtPeriodico.new(["Rafael Herrero","Daniel Ramos"], "La regeneracion de las gemas", Date.new(2015,11,17), "El Mundo", 130)
 		@documento1 = RefBiblio::DocElectronico.new(["Rafael Herrero","Daniel Ramos"], "Estudio del habitat de las gemas", "Universidad de La Laguna", "Oficina de Software Libre de la ULL", Date.new(2015,11,17), "PDF", "http://osl.ull.es/noticias/", Date.new(2015,12,9))
     end
