@@ -129,7 +129,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute edicion.</p>
+<p>Metodo que nos permite introducir la edicion del libro.</p>
 </div></span>
   
 </li>
@@ -156,7 +156,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute volumen.</p>
+<p>Metodo que nos permite introducir el volumen del libro.</p>
 </div></span>
   
 </li>
@@ -223,7 +223,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo que nos permite formatear las referencias de los libros.</p>
+</div></span>
   
 </li>
 
@@ -272,18 +274,18 @@
       <pre class="lines">
 
 
-89
-90
-91
-92
-93
-94
-95
-96
-97</pre>
+122
+123
+124
+125
+126
+127
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -318,13 +320,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute edicion</p>
+<p>Metodo que nos permite introducir la edicion del libro</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>edicion</span>
+      
+      
+        <span class='type'>(<tt>edicion</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Edicion del libro</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -332,12 +354,12 @@
       <pre class="lines">
 
 
-88
-89
-90</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edicion'>edicion</span>
   <span class='ivar'>@edicion</span>
@@ -361,13 +383,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute volumen</p>
+<p>Metodo que nos permite introducir el volumen del libro</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>volumen</span>
+      
+      
+        <span class='type'>(<tt>volumen</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Volumen del libro</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -375,12 +417,12 @@
       <pre class="lines">
 
 
-88
-89
-90</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_volumen'>volumen</span>
   <span class='ivar'>@volumen</span>
@@ -406,19 +448,48 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo que nos permite formatear las referencias de los libros</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Cadena de caracteres de la referencia del libro formateado</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-104
-105
-106
-107</pre>
+146
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
 	<span class='id identifier rubyid_string'>string</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -434,7 +505,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Dec 21 22:16:15 2015 by
+  Generated on Tue Dec 22 21:54:45 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.1).
 </div>

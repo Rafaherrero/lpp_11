@@ -103,7 +103,34 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>En esta clase creamos nuestra lista de referencias segun APA</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Rafael Herrero</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 
 
 
@@ -121,7 +148,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> </a>
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> {|i| ... }</a>
     
 
     
@@ -135,7 +162,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Método para que la clase sea enumerable.</p>
+</div></span>
   
 </li>
 
@@ -183,7 +212,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo que inserta una referencia en la lista y la ordena.</p>
+</div></span>
   
 </li>
 
@@ -205,7 +236,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo que devuelve en un string la lista de referencias formateada.</p>
+</div></span>
   
 </li>
 
@@ -243,12 +276,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+8
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
 	<span class='ivar'>@lista</span> <span class='op'>=</span> <span class='const'>Doublylinkedlist</span><span class='op'>::</span><span class='const'>Doublylinkedlist</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -268,24 +301,53 @@
       <div class="method_details first">
   <h3 class="signature first" id="each-instance_method">
   
-    - (<tt>Object</tt>) <strong>each</strong> 
+    - (<tt>Object</tt>) <strong>each</strong> {|i| ... }
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Método para que la clase sea enumerable</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>i</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Cada elemento de la lista</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span>
 	<span class='ivar'>@lista</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='kw'>yield</span> <span class='id identifier rubyid_i'>i</span><span class='rbrace'>}</span>
@@ -304,19 +366,50 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo que inserta una referencia en la lista y la ordena</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ref</span>
+      
+      
+        <span class='type'>(<tt>ref</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a insertar</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-9
-10
-11
-12</pre>
+14
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_insertar'>insertar</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='rparen'>)</span>
 	<span class='ivar'>@lista</span><span class='period'>.</span><span class='id identifier rubyid_insertar_final'>insertar_final</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='rparen'>)</span>
@@ -336,23 +429,52 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo que devuelve en un string la lista de referencias formateada</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>un string con la lista de referencias ordenada y con formato</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-16
-17
-18
-19
-20
-21
-22
-23</pre>
+27
+28
+29
+30
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/refAPA/refapa.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
 	<span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -372,7 +494,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Dec 21 22:16:15 2015 by
+  Generated on Tue Dec 22 21:54:44 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.1).
 </div>

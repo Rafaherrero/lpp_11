@@ -109,7 +109,7 @@ module Doublylinkedlist
 			return contador
 		end
 # Metodo que devuelve lo contenido en una posicion de la lista
-# @param [pos] posicion del elemento deseado
+# @param [pos] pos del elemento deseado
 # @return nodo de la posicion de la lista
 		def posicion (pos)
 		 	if @inicio.nil?

@@ -29,6 +29,27 @@ describe RefAPA::Refapa do
     end
     before :each do
         @APA = RefAPA::Refapa.new
+        @lista = Doublylinkedlist::Doublylinkedlist.new
+    end
+    describe "Probando lista"do
+    	it "Probando enumerable lista doblemente enlazada" do
+			@lista.insertar_inicio(5)
+			@lista.insertar_inicio(3)
+			@lista.insertar_inicio(2)
+			salida = " "
+			@lista.each{|i|
+				salida << i.to_s << " "
+			}
+			expect(salida).to eq (" 2 3 5 ")
+		end
+	end
+	describe "Probando herencia" do
+        it "Bien heredado" do
+		    expect(RefBiblio::Libro).to be_kind_of(BasicObject)
+		    expect(RefBiblio::ArtPeriodico).to be_kind_of(BasicObject)
+		    expect(RefBiblio::DocElectronico).to be_kind_of(BasicObject)
+		    expect(RefAPA::Refapa).to be_kind_of(BasicObject)
+	    end
     end
     describe "Insertar elementos" do
         it "Insertar libro y bien formateado" do

@@ -9,7 +9,7 @@ module RefAPA
 			@lista = Doublylinkedlist::Doublylinkedlist.new
 		end
 # Metodo que inserta una referencia en la lista y la ordena
-# @param [ref] referencia a insertar
+# @param [ref] ref a insertar
 
 		def insertar(ref)
 			@lista.insertar_final(ref)

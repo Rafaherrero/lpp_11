@@ -135,7 +135,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute autor.</p>
+<p>Metodo para guardar el nombre del autor/autores.</p>
 </div></span>
   
 </li>
@@ -162,7 +162,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute editorial.</p>
+<p>Metodo para guardar el editorial de la referencia.</p>
 </div></span>
   
 </li>
@@ -189,7 +189,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute publicacion.</p>
+<p>Metodo para guardar la fecha de publicacion de la referencia.</p>
 </div></span>
   
 </li>
@@ -216,7 +216,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute titulo.</p>
+<p>Metodo para guardar el titulo de la referencia.</p>
 </div></span>
   
 </li>
@@ -252,7 +252,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Método con el que podemos usar el modulo Enumerable.</p>
+</div></span>
   
 </li>
 
@@ -274,7 +276,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo para obtener el autor/autores de la referencia.</p>
+</div></span>
   
 </li>
 
@@ -296,7 +300,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo para obtener el editorial de la referencia.</p>
+</div></span>
   
 </li>
 
@@ -318,7 +324,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo para obtener la fecha de publicacion de la referencia.</p>
+</div></span>
   
 </li>
 
@@ -340,7 +348,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo para obtener el titulo de la referencia.</p>
+</div></span>
   
 </li>
 
@@ -404,11 +414,11 @@
       <pre class="lines">
 
 
-7
-8</pre>
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -436,13 +446,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute autor</p>
+<p>Metodo para guardar el nombre del autor/autores</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>autor</span>
+      
+      
+        <span class='type'>(<tt>autor</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Nombre del autor a introducir</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -450,12 +480,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_autor'>autor</span>
   <span class='ivar'>@autor</span>
@@ -479,13 +509,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute editorial</p>
+<p>Metodo para guardar el editorial de la referencia</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>editorial</span>
+      
+      
+        <span class='type'>(<tt>editorial</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Editorial de la referencia a introducir</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -493,12 +543,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_editorial'>editorial</span>
   <span class='ivar'>@editorial</span>
@@ -522,13 +572,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute publicacion</p>
+<p>Metodo para guardar la fecha de publicacion de la referencia</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>publicacion</span>
+      
+      
+        <span class='type'>(<tt>publicacion</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Fecha de publicacion de la referencia a introducir</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -536,12 +606,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_publicacion'>publicacion</span>
   <span class='ivar'>@publicacion</span>
@@ -565,13 +635,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute titulo</p>
+<p>Metodo para guardar el titulo de la referencia</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>titulo</span>
+      
+      
+        <span class='type'>(<tt>titulo</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Titulo de la referencia a introducir</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -579,12 +669,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_titulo'>titulo</span>
   <span class='ivar'>@titulo</span>
@@ -610,42 +700,91 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Método con el que podemos usar el modulo Enumerable</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>otro</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Otro elemento a comparar</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Devuelve valores entre -1 y 1 segun el orden</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83</pre>
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_otro'>otro</span><span class='rparen'>)</span>
 	<span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@autor</span> <span class='op'>==</span> <span class='id identifier rubyid_otro'>otro</span><span class='period'>.</span><span class='id identifier rubyid_get_autor'>get_autor</span><span class='rparen'>)</span>
@@ -688,18 +827,47 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo para obtener el autor/autores de la referencia</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Autor/autores de la referencia</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-47
-48
-49</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_autor'>get_autor</span>
 	<span class='ivar'>@autor</span>
@@ -718,18 +886,47 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo para obtener el editorial de la referencia</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Editorial de la referencia</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-50
-51
-52</pre>
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_editorial'>get_editorial</span>
 	<span class='ivar'>@editorial</span>
@@ -748,18 +945,47 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo para obtener la fecha de publicacion de la referencia</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Fecha de publicacion de la referencia</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-53
-54
-55</pre>
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_publicacion'>get_publicacion</span>
 	<span class='ivar'>@publicacion</span>
@@ -778,18 +1004,47 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo para obtener el titulo de la referencia</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Titulo de la referencia</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-44
-45
-46</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_titulo'>get_titulo</span>
 	<span class='ivar'>@titulo</span>
@@ -804,7 +1059,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Dec 21 22:16:15 2015 by
+  Generated on Tue Dec 22 21:54:45 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.1).
 </div>

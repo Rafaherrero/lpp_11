@@ -131,7 +131,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute formato.</p>
+<p>Clase que nos permite representar los articulos periodisticos de una
+publicacion periodica.</p>
 </div></span>
   
 </li>
@@ -158,7 +159,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute paginas.</p>
+<p>Metodo que permite insertar el numero de paginas.</p>
 </div></span>
   
 </li>
@@ -225,7 +226,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo que nos devuelve la referencia del articulo periodistico formateado.</p>
+</div></span>
   
 </li>
 
@@ -280,19 +283,19 @@
       <pre class="lines">
 
 
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128</pre>
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formato'>formato</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -328,13 +331,30 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute formato</p>
+<p>Clase que nos permite representar los articulos periodisticos de una
+publicacion periodica</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Rafael Herrero</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -342,12 +362,12 @@
       <pre class="lines">
 
 
-118
-119
-120</pre>
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_formato'>formato</span>
   <span class='ivar'>@formato</span>
@@ -371,13 +391,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute paginas</p>
+<p>Metodo que permite insertar el numero de paginas</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>paginas</span>
+      
+      
+        <span class='type'>(<tt>paginas</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Numero de paginas del articulo periodistico</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -385,12 +425,12 @@
       <pre class="lines">
 
 
-118
-119
-120</pre>
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_paginas'>paginas</span>
   <span class='ivar'>@paginas</span>
@@ -416,19 +456,48 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo que nos devuelve la referencia del articulo periodistico formateado</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>String de la referencia del articulo periodistico formateado</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-132
-133
-134
-135</pre>
+189
+190
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
 	<span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -444,7 +513,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Dec 21 22:16:15 2015 by
+  Generated on Tue Dec 22 21:54:45 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.1).
 </div>
