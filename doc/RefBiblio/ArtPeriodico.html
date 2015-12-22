@@ -140,7 +140,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#paginas-instance_method" title="#paginas (instance method)">- (Object) <strong>paginas</strong> </a>
+      <a href="#paginas-instance_method" title="#paginas (instance method)">- (Object) <strong>paginas</strong>(paginas) </a>
     
 
     
@@ -185,7 +185,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ArtPeriodico) <strong>initialize</strong>(autor, titulo, publicacion, editorial, paginas) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ArtPeriodico) <strong>initialize</strong>(formato, &amp;block) </a>
     
 
     
@@ -249,7 +249,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Referencia.html" title="RefBiblio::Referencia (class)">Referencia</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Referencia.html#%3C%3D%3E-instance_method" title="RefBiblio::Referencia#&lt;=&gt; (method)">#<=></a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Referencia.html#%3C%3D%3E-instance_method" title="RefBiblio::Referencia#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="Referencia.html#get_autor-instance_method" title="RefBiblio::Referencia#get_autor (method)">#get_autor</a></span>, <span class='object_link'><a href="Referencia.html#get_editorial-instance_method" title="RefBiblio::Referencia#get_editorial (method)">#get_editorial</a></span>, <span class='object_link'><a href="Referencia.html#get_publicacion-instance_method" title="RefBiblio::Referencia#get_publicacion (method)">#get_publicacion</a></span>, <span class='object_link'><a href="Referencia.html#get_titulo-instance_method" title="RefBiblio::Referencia#get_titulo (method)">#get_titulo</a></span></p>
 
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
@@ -257,7 +257,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="RefBiblio::ArtPeriodico (class)">ArtPeriodico</a></span></tt>) <strong>initialize</strong>(autor, titulo, publicacion, editorial, paginas) 
+    - (<tt><span class='object_link'><a href="" title="RefBiblio::ArtPeriodico (class)">ArtPeriodico</a></span></tt>) <strong>initialize</strong>(formato, &amp;block) 
   
 
   
@@ -280,19 +280,29 @@
       <pre class="lines">
 
 
-106
-107
-108
-109
-110</pre>
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 119</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_autor'>autor</span><span class='comma'>,</span> <span class='id identifier rubyid_titulo'>titulo</span><span class='comma'>,</span> <span class='id identifier rubyid_publicacion'>publicacion</span><span class='comma'>,</span> <span class='id identifier rubyid_editorial'>editorial</span><span class='comma'>,</span> <span class='id identifier rubyid_paginas'>paginas</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_formato'>formato</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Papel</span><span class='tstring_end'>&quot;</span></span>
-	<span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_autor'>autor</span><span class='comma'>,</span><span class='id identifier rubyid_titulo'>titulo</span><span class='comma'>,</span><span class='id identifier rubyid_editorial'>editorial</span><span class='comma'>,</span><span class='id identifier rubyid_publicacion'>publicacion</span><span class='comma'>,</span><span class='id identifier rubyid_formato'>formato</span><span class='rparen'>)</span>
-	<span class='ivar'>@paginas</span> <span class='op'>=</span> <span class='id identifier rubyid_paginas'>paginas</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formato'>formato</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+		<span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>==</span> <span class='int'>1</span> 
+			<span class='kw'>yield</span> <span class='kw'>self</span>
+		<span class='kw'>else</span>
+			<span class='id identifier rubyid_instance_eval'>instance_eval</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span> 
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+	<span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_formato'>formato</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -332,12 +342,12 @@
       <pre class="lines">
 
 
-105
-106
-107</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_formato'>formato</span>
   <span class='ivar'>@formato</span>
@@ -352,7 +362,7 @@
       <div class="method_details ">
   <h3 class="signature " id="paginas-instance_method">
   
-    - (<tt>Object</tt>) <strong>paginas</strong> 
+    - (<tt>Object</tt>) <strong>paginas</strong>(paginas) 
   
 
   
@@ -375,12 +385,12 @@
       <pre class="lines">
 
 
-105
-106
-107</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_paginas'>paginas</span>
   <span class='ivar'>@paginas</span>
@@ -412,17 +422,17 @@
       <pre class="lines">
 
 
-112
-113
-114
-115</pre>
+132
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/refBiblio/referencia.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
 	<span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-	<span class='id identifier rubyid_string'>string</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@autor</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> (</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='const'>Date</span><span class='op'>::</span><span class='const'>MONTHNAMES</span><span class='lbracket'>[</span><span class='id identifier rubyid_publicacion'>publicacion</span><span class='period'>.</span><span class='id identifier rubyid_month'>month</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_publicacion'>publicacion</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_publicacion'>publicacion</span><span class='period'>.</span><span class='id identifier rubyid_year'>year</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>). </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@titulo</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>. </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@editorial</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, pp. </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@paginas</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+	<span class='id identifier rubyid_string'>string</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@autor</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> (</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='const'>Date</span><span class='op'>::</span><span class='const'>MONTHNAMES</span><span class='lbracket'>[</span><span class='id identifier rubyid_get_publicacion'>get_publicacion</span><span class='period'>.</span><span class='id identifier rubyid_month'>month</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_get_publicacion'>get_publicacion</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_get_publicacion'>get_publicacion</span><span class='period'>.</span><span class='id identifier rubyid_year'>year</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>). </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@titulo</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>. </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@editorial</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, pp. </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@formato</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@paginas</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> paginas</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -434,7 +444,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Dec 21 17:31:22 2015 by
+  Generated on Mon Dec 21 22:16:15 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.1).
 </div>

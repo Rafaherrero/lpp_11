@@ -1,8 +1,10 @@
 module Doublylinkedlist
 	Struct.new("Nodo", :ant, :valor, :sig)
-
+# En esta clase creamos nuestra propia lista doblemente enlazada
+# @author Rafael Herrero
 	class Doublylinkedlist
 	    include Enumerable
+# 
 	    def initialize()
 			@inicio = nil
 			@final = nil

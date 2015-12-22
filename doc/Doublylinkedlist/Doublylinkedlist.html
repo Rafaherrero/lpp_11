@@ -103,7 +103,34 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>En esta clase creamos nuestra propia lista doblemente enlazada</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Rafael Herrero</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 
 
 
@@ -375,13 +402,13 @@
       <pre class="lines">
 
 
-6
 7
 8
-9</pre>
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
 	<span class='ivar'>@inicio</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -414,16 +441,16 @@
       <pre class="lines">
 
 
-121
 122
 123
 124
 125
 126
-127</pre>
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span> <span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 	<span class='id identifier rubyid_copia'>copia</span> <span class='op'>=</span> <span class='ivar'>@inicio</span>
@@ -452,7 +479,6 @@
       <pre class="lines">
 
 
-68
 69
 70
 71
@@ -468,10 +494,11 @@
 81
 82
 83
-84</pre>
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extraer_final'>extraer_final</span><span class='lparen'>(</span><span class='rparen'>)</span>
 	
@@ -510,7 +537,6 @@
       <pre class="lines">
 
 
-50
 51
 52
 53
@@ -526,10 +552,11 @@
 63
 64
 65
-66</pre>
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extraer_inicio'>extraer_inicio</span><span class='lparen'>(</span><span class='rparen'>)</span>
 	
@@ -568,7 +595,6 @@
       <pre class="lines">
 
 
-38
 39
 40
 41
@@ -578,10 +604,11 @@
 45
 46
 47
-48</pre>
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_insertar_final'>insertar_final</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='ivar'>@final</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -614,7 +641,6 @@
       <pre class="lines">
 
 
-27
 28
 29
 30
@@ -623,10 +649,11 @@
 33
 34
 35
-36</pre>
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_insertar_inicio'>insertar_inicio</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='ivar'>@inicio</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -658,7 +685,6 @@
       <pre class="lines">
 
 
-128
 129
 130
 131
@@ -673,10 +699,11 @@
 140
 141
 142
-143</pre>
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ordenar!'>ordenar!</span> 
 	<span class='id identifier rubyid_cambio'>cambio</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -714,7 +741,6 @@
       <pre class="lines">
 
 
-101
 102
 103
 104
@@ -732,10 +758,11 @@
 116
 117
 118
-119</pre>
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_posicion'>posicion</span> <span class='lparen'>(</span><span class='id identifier rubyid_pos'>pos</span><span class='rparen'>)</span>
  	<span class='kw'>if</span> <span class='ivar'>@inicio</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -776,7 +803,6 @@
       <pre class="lines">
 
 
-86
 87
 88
 89
@@ -789,10 +815,11 @@
 96
 97
 98
-99</pre>
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tamano'>tamano</span><span class='lparen'>(</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@inicio</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -828,7 +855,6 @@
       <pre class="lines">
 
 
-11
 12
 13
 14
@@ -842,10 +868,11 @@
 22
 23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/doublylinkedlist/doublylinkedlist.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
 	<span class='id identifier rubyid_actual'>actual</span> <span class='op'>=</span> <span class='ivar'>@inicio</span>
@@ -872,7 +899,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Dec 21 17:31:22 2015 by
+  Generated on Mon Dec 21 22:16:15 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.1).
 </div>
