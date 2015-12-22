@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refBiblio (0.1.0)
+    refbiblio_rafa (0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -103,6 +103,6 @@ DEPENDENCIES
   guard-bundler
   guard-rspec
   rake (~> 10.0)
-  refBiblio!
+  refbiblio_rafa!
   rspec (~> 3.3.0)
   yard
