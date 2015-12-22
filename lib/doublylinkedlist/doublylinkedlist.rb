@@ -4,12 +4,13 @@ module Doublylinkedlist
 # @author Rafael Herrero
 	class Doublylinkedlist
 	    include Enumerable
-# 
+# Iniciar los punteros de la lista, inicio y final
 	    def initialize()
 			@inicio = nil
 			@final = nil
 		end
-		
+# Metodo para imprimir la lista con formato
+# @return la lista formateada en un string
 		def to_s
 			actual = @inicio
 			cadena = "|"
@@ -25,7 +26,9 @@ module Doublylinkedlist
 			cadena << "|"
 			return cadena
 		end
-		
+# Metodo que nos permite insertar algo al inicio de la lista
+# @param [val] val recibe el valor a insertar en la lista
+
 		def insertar_inicio(val)
 			if @inicio.nil?
 				@inicio = Struct::Nodo.new(nil, val, nil)
@@ -36,6 +39,8 @@ module Doublylinkedlist
 				copia[:ant] = @inicio
 			end
 		end
+# Metodo que nos permite insertar algo al final de la lista
+# @param [val] val recibe el valor a insertar en la lista
 		
 		def insertar_final(val)
 			if @final.nil?
@@ -48,6 +53,7 @@ module Doublylinkedlist
 				@final = copia2
 			end
 		end
+# Metodo que nos permite extraer algo al inicio de la lista
 		
 		def extraer_inicio()
 			
@@ -66,6 +72,7 @@ module Doublylinkedlist
 				raise RuntimeError, "La lista esta vacia"
 			end
 		end
+# Metodo que nos permite extraer algo al final de la lista
 		
 		def extraer_final()
 			
@@ -84,6 +91,8 @@ module Doublylinkedlist
 				raise RuntimeError, "La lista esta vacia"
 			end
 		end
+# Metodo que nos devuelve la cantidad de elementos en la lista
+# @return cantidad de elementos en la lista
 		
 		def tamano()
 			if !@inicio.nil?
@@ -99,7 +108,9 @@ module Doublylinkedlist
 			end
 			return contador
 		end
-		
+# Metodo que devuelve lo contenido en una posicion de la lista
+# @param [pos] posicion del elemento deseado
+# @return nodo de la posicion de la lista
 		def posicion (pos)
 		 	if @inicio.nil?
 		 		raise RuntimeError, "La lista esta vacia"
@@ -119,7 +130,8 @@ module Doublylinkedlist
 		 	
 			return copia[:valor]
 		end
-		
+# Método para que la lista sea enumerable
+
 		def each (&block)
 			copia = @inicio
 			while !copia.nil?
@@ -127,6 +139,8 @@ module Doublylinkedlist
 				copia = copia[:sig]
 			end
 		end
+# Metodo que nos ordenada la lista segun los criterios de la APA
+		
 		def ordenar! 
 			cambio = true
 			while cambio
