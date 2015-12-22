@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'refBiblio/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "refbiblio"
+  spec.name          = "refbiblio_rafa"
   spec.version       = RefBiblio::VERSION
   spec.authors       = ["Rafael Herrero"]
   spec.email         = ["rafael.herrero.13@ull.edu.es"]
